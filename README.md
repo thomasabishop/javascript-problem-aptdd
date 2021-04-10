@@ -13,4 +13,6 @@ npm install
 npm start
 ```
 
+(Forgive me for stating the obvious.)
+
 ### Running the tests 

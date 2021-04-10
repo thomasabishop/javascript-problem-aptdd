@@ -38,8 +38,8 @@ const stripBrackets = (str) => str.replace(/[\[\]']+/g, '');
 experi = stripBrackets(experi);
 experi = experi.split(',');
 
-console.log(experi);
-console.log(rawDates);
+//console.log(experi);
+//console.log(rawDates);
 //const divideInterval = experi[0].split('/');
 
 const divideInterval = (interval) => interval.split('/');
@@ -87,8 +87,3 @@ function convert(arr, sortRule) {
     throw 'Exception: ensure first argument equals non-empty array.';
   }
 }
-
-//console.log(convert(manualStartDates, 'earliest'));
-//console.log(convert(manualEndDates, 'latest'));
-
-//console.log(convert(manualEndDates));
