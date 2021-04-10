@@ -5,19 +5,20 @@ const intervalsObjectArray = intervalsStringArray.map((x) =>
   lib.partitionIntervals(x)
 );
 
-console.log(intervalsStringArray);
-console.log(intervalsObjectArray);
-
 function questionOne() {
   const earliestStart = () =>
     intervalsObjectArray.sort((a, b) => a.start - b.start);
-  return earliestStart()[0].start;
+  return earliestStart()[0].start.toISOString();
 }
 
 function questionTwo() {
   const latestEnd = () => intervalsObjectArray.sort((a, b) => b.end - a.end);
-  return latestEnd()[0].end;
+  return latestEnd()[0].end.toISOString();
 }
 
-console.log(questionOne());
-console.log(questionTwo());
+console.log({
+  questionOneAnswer: questionOne(),
+  questionTwoAnswer: questionTwo(),
+});
+
+module.exports = { questionOne, questionTwo };
