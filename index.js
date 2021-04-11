@@ -1,5 +1,5 @@
 const lib = require('./src/functionLibrary');
-const workers = lib.retrieveInputData('./src/data/test-data.txt', 'utf-8');
+const workers = lib.retrieveInputData('./src/data/input.txt', 'utf-8');
 const intervalsStringArray = lib.extractIntervals(workers);
 const intervalsObjectArray = intervalsStringArray.map((x) =>
   lib.partitionIntervals(x)

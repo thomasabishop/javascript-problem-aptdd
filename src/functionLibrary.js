@@ -1,4 +1,7 @@
 const fs = require('fs');
+const Moment = require('moment');
+const MomentRange = require('moment-range');
+const moment = MomentRange.extendMoment(Moment);
 
 /* Return input data as synchronous stream, split stream by newline to return array
  * @param {string} file - The file to retrieve
@@ -7,7 +10,7 @@ const fs = require('fs');
 
 function retrieveInputData(file, format) {
   let data = fs.readFileSync(file, format);
-  data = data.split(/\r?\n/);
+  data = data.split(/\r\n|\r|\n/);
   return data;
 }
 
